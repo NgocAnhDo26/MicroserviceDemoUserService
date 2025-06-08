@@ -42,6 +42,8 @@ namespace UserService
 
             app.UseHttpsRedirection();
 
+            app.UseCors(MyAllowSpecificOrigins);
+
             app.UseAuthorization();
 
 
