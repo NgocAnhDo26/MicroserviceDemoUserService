@@ -1,5 +1,5 @@
+using MicroserviceDemoUserService.Model;
 using Microsoft.EntityFrameworkCore;
-using UserService.Models;
 
 namespace UserService.Data;
 
