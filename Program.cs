@@ -7,7 +7,7 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        const string myAllowSpecificOrigins = "_myAllowSpecificOrigins";
+        // const string myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
         var builder = WebApplication.CreateBuilder(args);
 
@@ -16,15 +16,15 @@ public static class Program
         builder.Services.AddDbContext<UserDbContext>(options =>
             options.UseSqlServer(connectionString));
 
-        builder.Services.AddCors(options =>
-        {
-            options.AddPolicy(name: myAllowSpecificOrigins,
-                policy =>
-                {
-                    policy.WithOrigins("https://simple-microservice-demo.vercel.app",
-                        "http://localhost:3000");
-                });
-        });
+        // builder.Services.AddCors(options =>
+        // {
+        //     options.AddPolicy(name: myAllowSpecificOrigins,
+        //         policy =>
+        //         {
+        //             policy.WithOrigins("https://simple-microservice-demo.vercel.app",
+        //                 "http://localhost:3000");
+        //         });
+        // });
 
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -42,7 +42,7 @@ public static class Program
 
         app.UseHttpsRedirection();
 
-        app.UseCors(myAllowSpecificOrigins);
+        // app.UseCors(myAllowSpecificOrigins);
 
         app.UseAuthorization();
 
