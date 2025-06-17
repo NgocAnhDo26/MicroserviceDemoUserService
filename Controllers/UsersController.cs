@@ -1,7 +1,7 @@
+using MicroserviceDemoUserService.Data;
 using MicroserviceDemoUserService.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using UserService.Data;
 
 namespace MicroserviceDemoUserService.Controllers;
 

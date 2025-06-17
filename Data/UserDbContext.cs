@@ -1,12 +1,10 @@
 using MicroserviceDemoUserService.Model;
 using Microsoft.EntityFrameworkCore;
 
-namespace UserService.Data;
+namespace MicroserviceDemoUserService.Data;
 
-public class UserDbContext : DbContext
+public class UserDbContext(DbContextOptions<UserDbContext> options) : DbContext(options)
 {
-    public UserDbContext(DbContextOptions<UserDbContext> options) : base(options) { }
-
     public DbSet<User> Users { get; set; }
 
     // Optional: Seed initial data
