@@ -256,3 +256,6 @@ appsettings.Development.json
 
 # idea
 .idea/
+
+# appsettings
+appsettings.json
